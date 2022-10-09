@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transcribe</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+  </head>
+  <script src="	https://unpkg.com/axios@0.24.0/dist/axios.min.js"></script>
+  <body style="background-color: #03003A;">
+    <main>
+      <div class="container">
+        <form id="myform" method="post" action="/compute">
+          <label for="x">x: </label><br>
+          <input type="text" id="x" name="x"><br>
+          <label for="y">y: </label><br>
+          <input type="text" id="y" name="y"><br>
+          <input type="submit" value="Compute!">
+        </form>
+      </div>
+    </main>
+  </body>
+</html>
