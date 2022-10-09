@@ -42,7 +42,7 @@ func computeHandler(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	job.Spec.Docker.Image = "ubuntu"
-	job.Spec.Docker.Entrypoint = []string{"echo", "hello"}
+	job.Spec.Docker.Entrypoint = []string{"echo", fmt.Sprintf("$((%s + %s))", x[1], y[1])}
 	submittedJob, err := client.Submit(context.Background(), job, nil)
 	if err != nil {
 		fmt.Println(fmt.Errorf("error on submission: %w", err))
